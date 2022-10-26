@@ -3,7 +3,7 @@ from loguru import logger
 from rich.console import Console
 
 from music_downloader import version
-from music_downloader.services.base import Downloader
+from music_downloader.downloader import Downloader
 
 # Configure Loguru Logger
 logger.add("log.log", level="TRACE", rotation="50 MB")
