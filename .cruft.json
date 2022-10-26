@@ -1,0 +1,28 @@
+{
+  "template": "https://github.com/martokk/cookiecutter_workflow_manager",
+  "commit": "d35be15d9d23a24f7849e55499ef6be3c342e6ae",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "project_name": "music_downloader",
+      "project_description": "A wrapper for common music downloaders.",
+      "organization": "v3services",
+      "license": "MIT",
+      "_all_python_minor_version": [
+        10
+      ],
+      "minimal_python_version": "3.10",
+      "github_name": "martokk",
+      "email": "25113632+martokk@users.noreply.github.com",
+      "version": "0.0.1",
+      "line_length": "100",
+      "create_example_template": "cli",
+      "create_dockerfile_template": "no",
+      "_copy_without_render": [
+        "poetry.lock"
+      ],
+      "_template": "https://github.com/martokk/cookiecutter_workflow_manager"
+    }
+  },
+  "directory": null
+}
