@@ -41,7 +41,7 @@ classifiers = [  #! Update me
 "music_downloader" = "music_downloader.__main__:app"
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = ">=3.10,<3.12"
 loguru = "^0.6.0"
 pyqt5 = "^5.15.7"
 workflow_manager = { git = "https://github.com/martokk/workflow_manager.git", branch = "main" }
@@ -72,6 +72,8 @@ coverage-badge = "^1.1.0"
 pytest-html = "^3.1.1"
 pytest-cov = "^4.0.0"
 pyqt5-stubs = "^5.15.6.0"
+pyinstaller = "^5.6.1"
+pillow = "^9.2.0"
 
 [tool.black]
 # https://github.com/psf/black
