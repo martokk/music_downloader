@@ -41,7 +41,7 @@ classifiers = [  #! Update me
 "music_downloader" = "music_downloader.__main__:app"
 
 [tool.poetry.dependencies]
-python = "^3.10"
+python = ">=3.10,<3.12"
 loguru = "^0.6.0"
 pyqt5 = "^5.15.7"
 workflow_manager = { git = "https://github.com/martokk/workflow_manager.git", branch = "main" }
@@ -49,6 +49,7 @@ workflow_manager = { git = "https://github.com/martokk/workflow_manager.git", br
 typer = {extras = ["all"], version = "^0.6.1"}
 rich = "^12.6.0"
 colorama = "^0.4.5"
+yt-dlp = "^2022.10.4"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -71,6 +72,8 @@ coverage-badge = "^1.1.0"
 pytest-html = "^3.1.1"
 pytest-cov = "^4.0.0"
 pyqt5-stubs = "^5.15.6.0"
+pyinstaller = "^5.6.1"
+pillow = "^9.2.0"
 
 [tool.black]
 # https://github.com/psf/black
@@ -91,6 +94,7 @@ exclude = '''
     | dist
     | env
     | venv
+    | typings
 )/
 '''
 
@@ -99,7 +103,7 @@ exclude = '''
 py_version = 310
 line_length = 100
 
-known_typing = ["typing", "types", "typing_extensions", "mypy", "mypy_extensions"]
+known_typing = ["typing", "typings", "types", "typing_extensions", "mypy", "mypy_extensions"]
 sections = ["FUTURE", "TYPING", "STDLIB", "THIRDPARTY", "FIRSTPARTY", "LOCALFOLDER"]
 include_trailing_comma = true
 profile = "black"
@@ -107,7 +111,7 @@ multi_line_output = 3
 indent = 4
 color_output = true
 skip = ["pyqt5_ui.py", "resources_rc.py"]
-skip_glob = [".venv/*"]
+skip_glob = [".venv/*", "typings/*"]
 
 [tool.mypy]
 # https://mypy.readthedocs.io/en/latest/config_file.html#using-a-pyproject-toml-file
