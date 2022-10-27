@@ -1,6 +1,6 @@
 {
   "template": "https://github.com/martokk/cookiecutter_workflow_manager",
-  "commit": "d35be15d9d23a24f7849e55499ef6be3c342e6ae",
+  "commit": "867c642ddd1982eafb1047cdac7bda6e130e2d59",
   "checkout": null,
   "context": {
     "cookiecutter": {
