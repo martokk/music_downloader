@@ -7,7 +7,7 @@ PWD := `pwd`
 PROJECT := music_downloader
 PROJECT_TITLE := Music Downloader
 VERSION := latest
-PYINSTALLER_ENTRY := $(PROJECT)/__main__.py
+PYINSTALLER_ENTRY := $(PROJECT)/main.py
 
 # poetry show black2 &> /dev/null && echo "true" || echo "false"
 
