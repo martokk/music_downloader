@@ -1,3 +1,5 @@
+from pathlib import Path
+
 import typer
 from loguru import logger
 from rich.console import Console
@@ -30,10 +32,9 @@ def version_callback(print_version: bool) -> None:
 # Typer Commands
 @app.command()
 def main(
-    service: str = typer.Argument(..., help="Downloader Service to use"),
     url: str = typer.Argument(..., help="URL"),
-    save_to: str = typer.Argument(..., help="Save To Directory"),
-    print_version: bool = typer.Option(
+    save_to: str = typer.Argument(default=Path().home(), help="Save To Directory"),
+    _: bool = typer.Option(
         None,
         "-v",
         "--version",
@@ -44,10 +45,9 @@ def main(
 ) -> None:
 
     # Example Entry Point
-    console.print(f"CLI: {service=} {url=} {save_to=}")
-    logger.info(f"CLI: {service=} {url=} {save_to=}")
+    logger.debug(f"CLI: {url=} {save_to=}")
 
-    Downloader(service_str=service, url=url, save_to=save_to).download()
+    Downloader(url=url, save_to=save_to).download()
 
 
 if __name__ == "__main__":

@@ -11,6 +11,7 @@ from workflow_manager.config import Config
 from workflow_manager.workflow_manager import WorkflowManager
 
 from music_downloader import version
+from music_downloader.downloader import Downloader
 from music_downloader.pyqt5_ui import Ui_MainWindow
 
 logger.add("log.log", level="TRACE", rotation="50 MB")
@@ -27,10 +28,11 @@ CONFIG = Config(
 
 
 class MusicDownloaderActionScript(ActionScript):
-    def script(self, **kwargs: object) -> str:
+    def script(self, **kwargs: Any) -> str:
         logger.info(f"Starting: {self.__class__.__name__}.script()")
 
-        return f"Hello World. {kwargs=}"
+        Downloader(url=kwargs["url"], save_to=kwargs["save_to_directory"]).download()
+        return f"Download Complete."
 
 
 class MusicDownloaderWorkflowManager(WorkflowManager):
