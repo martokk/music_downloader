@@ -46,7 +46,7 @@ loguru = "^0.6.0"
 pyqt5 = "^5.15.7"
 workflow_manager = { git = "https://github.com/martokk/workflow_manager.git", branch = "main" }
 
-typer = {extras = ["all"], version = "^0.6.1"}
+typer = {extras = ["all"], version = "^0.7.0"}
 rich = "^12.6.0"
 colorama = "^0.4.5"
 yt-dlp = "^2022.10.4"
