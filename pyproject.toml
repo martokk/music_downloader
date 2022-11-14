@@ -49,7 +49,7 @@ workflow_manager = { git = "https://github.com/martokk/workflow_manager.git", br
 typer = {extras = ["all"], version = "^0.6.1"}
 rich = "^12.6.0"
 colorama = "^0.4.5"
-yt-dlp = "^2022.10.4"
+yt-dlp = "^2022.11.11"
 
 
 [tool.poetry.group.dev.dependencies]
